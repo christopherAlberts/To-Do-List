@@ -14,7 +14,8 @@ if not os.path.isfile(file_name):
 def select_task(tasks):
     while True:
         try:
-            task_number = int(input("Enter the number of the task: ")) - 1
+            print("Enter the number of the task: ")
+            task_number = int(input()) - 1
             if 0 <= task_number < len(tasks):
                 return tasks[task_number]
             else:
@@ -22,36 +23,6 @@ def select_task(tasks):
         except ValueError:
             print("Please enter a valid number.")
 
-
-# def display_tasks():
-#     with open(file_name, 'r') as file:
-#         reader = csv.reader(file)
-#         for row in reader:
-#             print(', '.join(row))
-
-# def display_tasks():
-#     print("\nTask List:")
-#     print(f"{'No.':<5} {'Task':<30} Status")
-#     print("-" * 40)  # Separator line for the header
-#     with open(file_name, 'r') as file:
-#         reader = csv.reader(file)
-#         next(reader)  # Skip header
-#         for index, row in enumerate(reader, start=1):
-#             print(f"{index:<5} {row[0]:<30} {row[1]}")
-
-
-# def display_tasks():
-#     print("\n+---------------------------------------+")
-#     print(f"| {'No.':<3} | {'Task':<20} | {'Status':<7} |")
-#     print("+-----+----------------------+---------+")
-#
-#     with open(file_name, 'r') as file:
-#         reader = csv.reader(file)
-#         next(reader)  # Skip header
-#         for index, row in enumerate(reader, start=1):
-#             print(f"| {index:<3} | {row[0]:<20} | {row[1]:<7} |")
-#
-#     print("+-----+----------------------+---------+")
 
 def calculate_max_widths():
     max_task_length = max(4, len("Task"))  # Minimum width for "Task"
@@ -110,7 +81,8 @@ def display_tasks_with_numbers():
 
 def toggle_task_status_ui():
     tasks = display_tasks_with_numbers()
-    task_selection = input("Enter the number of the task to toggle status (or 'x' to return): ")
+    print("Enter the number of the task to toggle status (or 'x' to return): ")
+    task_selection = input()
     if task_selection.lower() == 'x':
         return
 
@@ -149,7 +121,8 @@ def add_task(task):
 
 
 def add_task_ui():
-    task = input("Enter the task to add (or 'x' to return to main menu): ")
+    print("Enter the task to add (or 'x' to return to main menu): ")
+    task = input()
     if task.lower() == 'x':
         return
     add_task(task)
@@ -172,7 +145,8 @@ def edit_task(old_task, new_task):
 
 def edit_task_ui():
     tasks = display_tasks_with_numbers()
-    task_selection = input("Enter the number of the task to edit (or 'x' to return): ")
+    print("Enter the number of the task to edit (or 'x' to return): ")
+    task_selection = input()
     if task_selection.lower() == 'x':
         return
 
@@ -180,7 +154,8 @@ def edit_task_ui():
         task_number = int(task_selection) - 1
         if 0 <= task_number < len(tasks):
             task_to_edit, _ = tasks[task_number]
-            new_task = input("Enter the new task: ")
+            print("Enter the new task: ")
+            new_task = input()
             edit_task(task_to_edit, new_task)
             display_tasks()
         else:
@@ -204,7 +179,8 @@ def remove_task(task):
 
 def remove_task_ui():
     tasks = display_tasks_with_numbers()
-    task_selection = input("Enter the number of the task to remove (or 'x' to return): ")
+    print("Enter the number of the task to remove (or 'x' to return): ")
+    task_selection = input()
     if task_selection.lower() == 'x':
         return
 
@@ -231,7 +207,8 @@ def todo_cli():
         print("5. Mark Task as Complete")
         print("6. Exit")
 
-        choice = input("Enter your choice: ")
+        print("Enter your choice: ")
+        choice = input()
 
         if choice == '1':
             display_tasks()
