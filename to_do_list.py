@@ -220,7 +220,7 @@ def todo_cli():
         elif choice == '5':
             # mark_complete_ui()
             toggle_task_status_ui()
-        elif choice == '6':
+        elif choice.lower() in ['6', 'exit', 'x']:
             print("Exiting To-Do List CLI.")
             break
         else:
