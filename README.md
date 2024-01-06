@@ -3,7 +3,7 @@
 ![](assets/to_do_list_logo_1.png)
 
 [![Releases](https://img.shields.io/badge/Github-Releases-blue)](https://github.com/christopherAlberts/To-Do-List/releases)
-[![Languages](https://img.shields.io/badge/Python-FFD43B?&logo=python&logoColor=blue)](todo.py)
+[![Languages](https://img.shields.io/badge/Python-FFD43B?&logo=python&logoColor=blue)](to_do_list.py)
 [![OS](https://img.shields.io/badge/Windows-0078D6?&logo=windows&logoColor=white)](README.md) <!--added redme links, just to not go elseweher -->
 
 [//]: # ([![Github All Releases]&#40;https://img.shields.io/github/downloads/Abhijeetbyte/MYPmanager/total?label=Downloads&#41;]&#40;https://github.com/Abhijeetbyte/MYPmanager/releases/download/v1.5/MYPmanager_setup.exe&#41;)
