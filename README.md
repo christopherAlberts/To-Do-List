@@ -2,8 +2,7 @@
 
 ![](assets/to_do_list_logo_1.png)
 
-[//]: # ([![Releases]&#40;https://img.shields.io/badge/Github-Releases-blue&#41;]&#40;https://github.com/Abhijeetbyte/MYPmanager/releases&#41;)
-
+[![Releases](https://img.shields.io/badge/Github-Releases-blue)](https://github.com/christopherAlberts/To-Do-List/releases)
 [![Languages](https://img.shields.io/badge/Python-FFD43B?&logo=python&logoColor=blue)](todo.py)
 [![OS](https://img.shields.io/badge/Windows-0078D6?&logo=windows&logoColor=white)](README.md) <!--added redme links, just to not go elseweher -->
 
