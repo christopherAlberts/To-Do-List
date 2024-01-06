@@ -113,7 +113,6 @@ def toggle_task_status_ui():
         print("Please enter a valid number.")
 
 
-
 def add_task(task):
     with open(file_name, 'a', newline='') as file:
         writer = csv.writer(file)
@@ -226,6 +225,7 @@ def todo_cli():
             break
         else:
             print("Invalid choice, please try again.")
+
 
 # Check if file exists, if not create it
 if not os.path.isfile(file_name):
