@@ -2,11 +2,21 @@ import csv
 import os
 
 # File name for the CSV
-file_name = 'todo_list.csv'
+file_name = 'data/todo_list.csv'  # This creates a 'data' folder in the current working directory
+
+# Get the absolute path of the file
+abs_file_path = os.path.abspath(file_name)
+
+# Directory where the file will be saved
+directory = os.path.dirname(abs_file_path)
+
+# Check if the directory exists, if not create it
+if not os.path.exists(directory):
+    os.makedirs(directory)
 
 # Check if file exists, if not create it
-if not os.path.isfile(file_name):
-    with open(file_name, 'w', newline='') as file:
+if not os.path.isfile(abs_file_path):
+    with open(abs_file_path, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['Task', 'Status'])  # Header
 
